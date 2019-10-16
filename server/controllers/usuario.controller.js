@@ -56,7 +56,7 @@ catch{
 usuarioCtrl.login = async (req, res) => {
 
     try{
-  const user = await Usuario.find({name : req.body.name, pass : req.body.pass});
+  const user = await Usuario.findOne({name : req.body.name, pass : req.body.pass});
     
     res.json(user);
     }
